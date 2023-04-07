@@ -1,15 +1,15 @@
 # SPA Project
 
-## Front end
+## Back end
 ```
-cd frontend
+cd backend
 npm install
 npm run start
 ```
 
-## Back end
+## Front end
 ```
-cd backend
+cd frontend
 npm install
 npm run start
 ```
