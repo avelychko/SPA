@@ -7,11 +7,13 @@ export default function Stores() {
       <>
         <link rel="stylesheet" href="Stores.css"/>
         <h1>My stores</h1>
-          {[{ id: 1, name: "Target"}].map((store) => (
+          {[{ id: 1, name: "Target", products: [{ _id: 1, name: "Soap" }]}].map((store) => (
             <div key={store.id} className="card">
                 <Link to={`${store.id}`}><h1 className="label-font">{store.name}</h1></Link>
-                <h4>Products: {// todo 
-                }</h4>
+                <h4>Products:</h4>
+                { store.products.map((item) => (
+                  <div> {item.name} </div>
+                ))}
                 <h4 className="label-font">ID: { store.id }</h4>
           </div>
               ))}
