@@ -20,4 +20,10 @@ body {
 .form {
     display: flex;
     flex-direction: row;
+    width: 400px;
+    aspect-ratio: 4;
+    background-color: #8AAAE5;
+    border-radius: 20px;
+    margin: 12px;
+    padding: 4px;
 }
