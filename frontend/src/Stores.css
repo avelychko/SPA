@@ -1,0 +1,12 @@
+.label-font {
+    color:          black;
+    font-family:      'Segoe UI';
+    padding:            10px;
+}
+
+.card {
+    width:              400px;
+    aspect-ratio:       4;
+    background-color: gainsboro;
+    border-radius:      20px;
+}
