@@ -20,7 +20,7 @@ export default function Items() {
   }
   
   async function fetchItems() {
-    /*const response = await fetch("http://localhost:3000/todo");
+    /*const response = await fetch("http://localhost:3000/stores/${params.store_id}/items");
     return await response.json();*/
     return null
   }

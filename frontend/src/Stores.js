@@ -23,7 +23,7 @@ export default function Stores() {
   }
   
   async function fetchStores() {
-    /*const response = await fetch("http://localhost:3000/todo");
+    /*const response = await fetch("http://localhost:3000/stores");
     return await response.json();*/
     return null
   }
