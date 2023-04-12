@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './style.css';
 
 async function postStore(store) {
 
@@ -28,17 +27,11 @@ export default function NewStore() {
                 onChange={(e) => setName(e.target.value)}/>
             </label>
             </div>
+            
             <div>
-            {/*<label>Please enter the store products:  
+            <label>Please enter an ID: 
                 <input type="text"
-                required
-                value={""}
-                onChange={(e) => setProducts(//e.target.value)}/>
-        </label>|*/}
-            </div>
-            <div>
-            <label>Leave id blank for a random one
-                <input type="text"
+                placeholder='Leave blank for random id'
                 value={currId}
                 onChange={(e) => setId(e.target.value)}/>
             </label>
@@ -49,4 +42,3 @@ export default function NewStore() {
       </>
     );
   }
-  
