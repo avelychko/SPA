@@ -9,13 +9,14 @@ export async function getNothin() {
 
 export default function NewItem() {
     const [name, setName] = useState("");
-    const [currId, setId] = useState(null);
+    const [price, setPrice] = useState(null);
+    const [quantity, setQuantity] = useState(null);
 
     return (
         <>
             <h1>Add a new item</h1>
             <form onSubmit={(e) => postItem(
-                { name: name, id: currId }
+                { name: name, price: price, quantity: quantity }
             )}>
                 <div>
                     <label>Name:
@@ -29,19 +30,19 @@ export default function NewItem() {
 
                 <div>
                     <label>Price:
-                        <input type="text"
+                        <input type="number"
                             placeholder="type a price here..."
-                            value={currId}
-                            onChange={(e) => setId(e.target.value)} />
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)} />
                     </label>
                 </div>
 
                 <div>
                     <label>Quantity:
-                        <input type="text"
+                        <input type="number"
                             placeholder="type a number here..."
-                            value={currId}
-                            onChange={(e) => setId(e.target.value)} />
+                            value={quantity}
+                            onChange={(e) => setQuantity(e.target.value)} />
                     </label>
                 </div>
                 <input type="submit" value="Submit" />
