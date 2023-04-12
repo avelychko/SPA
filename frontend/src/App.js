@@ -11,7 +11,8 @@ function App() {
       <Routes location="/">
         <Route index element={<Wrapper />} />
         <Route path="/stores" element={<Stores />} />
-        <Route path="/stores/new" element={<NewStore />} />
+              <Route path="/stores/new" element={<NewStore />} />
+              <Route path="/stores/:storeId/items/new" element={<Items />} />
       </Routes>
     </BrowserRouter>
 

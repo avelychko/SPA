@@ -1,3 +1,4 @@
+import { Link, useLoaderData } from 'react-router-dom';
 import './style.css';
 
 export default function Items() {
@@ -5,13 +6,14 @@ export default function Items() {
   
     return (
       <>
-        <h1>{"Target"} Items</h1>
+            <h1>{"Target"} Items</h1>
         <div className='card'>
           <h4 className='label-font'>Products:</h4>
           { [{_id: 1, name: "Soap"}].map((item) => (
             <div className='label-font'> {item.name} </div>
           ))}
-        </div>
+            </div>
+            <Link to='items/new'>Add Item</Link>
 
       </>
     );

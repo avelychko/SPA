@@ -19,9 +19,9 @@ export default function NewStore() {
             {name: name, [products]: products, id: currId}
             )}>
             <div>
-            <label>Enter a description: 
+            <label>Enter store name: 
                 <input type="text"
-                placeholder="Please enter a store name"
+                placeholder="name"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}/>
