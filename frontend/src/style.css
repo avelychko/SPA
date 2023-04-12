@@ -5,8 +5,19 @@
 }
 
 .card {
-    width:              400px;
-    aspect-ratio:       4;
-    background-color: lightblue;
-    border-radius:      20px;
+    width: 400px;
+    aspect-ratio: 4;
+    background-color: #990011FF;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+body {
+    background-color: #FCF6F5FF;
+    margin: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
 }
