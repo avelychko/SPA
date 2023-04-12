@@ -15,7 +15,6 @@ app.use(express.json());
 await mongoose.connect('mongodb://localhost:27017/stores')
 
 app.get("/", (req, res) => {
-    console.log(req, res);
     res.json({
         code: 200,
         message: "Hello, Express",

@@ -19,7 +19,7 @@ storesRouter.get('/:store_id', async (req, res) => {
     const storeId = req.params.store_id;
     try {
         const store = await Stores.findOne({ _id: storeId });
-        console.log(store);
+        
         if (store === null) {
             res.status(404);
             res.json({
@@ -36,13 +36,12 @@ storesRouter.get('/:store_id', async (req, res) => {
     }
 });
 
-storesRouter.post("/new", async (req, res) => {
+storesRouter.post("/", async (req, res) => {
     const requestBody = req.body;
     requestBody._id = uuidv4();
 
     try {
         const result = await new Stores(requestBody).save();
-        console.log(result);
         res.status(201);
         res.json({
             status: 201,
