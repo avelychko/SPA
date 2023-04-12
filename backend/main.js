@@ -2,6 +2,7 @@ import express from 'express';
 import storesRouter from './stores.js';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import itemRouter from './items.js';
 
 const port = 3001;
 const app = express();
@@ -22,7 +23,10 @@ app.get("/", (req, res) => {
 });
 
 // TODO: Attach your `todos` router here
+itemRouter.mergeParams = true;
+storesRouter.use("/:store_id/items", ItemsRouter);
 app.use('/stores', storesRouter);
+
 
 app.listen(port, () => {
   console.log(`Server listening on localhost:${port}`);

@@ -28,12 +28,12 @@ export default function NewStore() {
             </label>
             </div>
             <div>
-            <label>Please enter the store products:  
+            {/*<label>Please enter the store products:  
                 <input type="text"
                 required
                 value={""}
-                onChange={(e) => setProducts(/*e.target.value*/)}/>
-            </label>
+                onChange={(e) => setProducts(//e.target.value)}/>
+        </label>|*/}
             </div>
             <div>
             <label>Leave id blank for a random one
