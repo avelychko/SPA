@@ -1,30 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
-//import Wrapper from './Wrapper';
-//import Stores, { fetchStores } from './Stores';
+import Wrapper from './Wrapper';
+import Stores, { fetchStores } from './Stores';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NewStore, { getNothin } from './NewStore';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-/*const router = createBrowserRouter([
+
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Wrapper />,
     children: [
       {
-        path: "/todo",
-        loader: fetchStores,
+        path: "/stores",
+        //loader: fetchStores,
         element: <Stores />,
+      },
+      {
+        path: "/stores/new",
+        //loader: getNothin,
+        element: (
+            <NewStore />
+        ),
       },
     ],
   },
-]);*/
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
   </React.StrictMode>
 );
 
