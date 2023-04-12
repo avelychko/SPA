@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Wrapper from './Wrapper';
 import Stores, { fetchStores } from './Stores';
-import App from './App';
+import Items from './Items';
 import reportWebVitals from './reportWebVitals';
 import NewStore, { getNothin } from './NewStore';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -24,6 +24,24 @@ const router = createBrowserRouter([
         //loader: getNothin,
         element: (
             <NewStore />
+        ),
+      },
+      {
+        path: "/stores/:storeId/items",
+        element: (
+          <Items />
+        ),
+      },
+      {
+        path: "/stores/:storeId/items/:itemId",
+        element: (
+          <Items />
+        ),
+      },
+      {
+        path: "/stores/:storeId/items/new",
+        element: (
+          <Items />
         ),
       },
     ],
