@@ -7,6 +7,7 @@ import Items from './Items';
 import SingleItem, { fetchSingleItem } from './SingleItem';
 import reportWebVitals from './reportWebVitals';
 import NewStore, { getNothin } from './NewStore';
+import NewItem from './NewItem';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/stores/:storeId/items/new",
         element: (
-          <Items />
+          <NewItem />
         ),
       },
     ],

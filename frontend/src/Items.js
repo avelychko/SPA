@@ -13,7 +13,7 @@ export default function Items() {
             <Link to={`items/${item._id}`}><h1 className="label-font">{item.name}</h1></Link>
           ))}
             </div>
-            <Link to='items/new'>Add Item</Link>
+            <Link to={'items/new'}>Add Item</Link>
 
       </>
     );
