@@ -18,9 +18,9 @@ export default function NewItem() {
                 { name: name, id: currId }
             )}>
                 <div>
-                    <label>Enter item name:
+                    <label>Name:
                         <input type="text"
-                            placeholder="name"
+                            placeholder="type a name here..."
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)} />
@@ -28,9 +28,18 @@ export default function NewItem() {
                 </div>
 
                 <div>
-                    <label>Please enter an ID:
+                    <label>Price:
                         <input type="text"
-                            placeholder='Leave blank for random id'
+                            placeholder="type a price here..."
+                            value={currId}
+                            onChange={(e) => setId(e.target.value)} />
+                    </label>
+                </div>
+
+                <div>
+                    <label>Quantity:
+                        <input type="text"
+                            placeholder="type a number here..."
                             value={currId}
                             onChange={(e) => setId(e.target.value)} />
                     </label>

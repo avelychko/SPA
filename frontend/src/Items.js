@@ -1,6 +1,5 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import './style.css';
-import {Link, useLoaderData} from 'react-router-dom';
 
 export default function Items() {
     const { items } = [{ id: 1, name: "Target"}] //useLoaderData();
