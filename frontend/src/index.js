@@ -4,6 +4,7 @@ import './index.css';
 import Wrapper from './Wrapper';
 import Stores, { fetchStores } from './Stores';
 import Items from './Items';
+import SingleItem, { fetchSingleItem } from './SingleItem';
 import reportWebVitals from './reportWebVitals';
 import NewStore, { getNothin } from './NewStore';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/stores/:storeId/items/:itemId",
         element: (
-          <Items />
+          <SingleItem />
         ),
       },
       {
