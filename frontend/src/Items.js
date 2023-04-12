@@ -1,3 +1,4 @@
+import './style.css';
 
 export default function Items() {
     const { items } = [{ id: 1, name: "Target"}] //useLoaderData();

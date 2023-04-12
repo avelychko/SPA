@@ -5,7 +5,7 @@ export default function Stores() {
   
     return (
       <>
-        <link rel="stylesheet" href="Stores.css"/>
+        <link rel="stylesheet" href="style.css"/>
         <h1>My stores</h1>
           {[{ id: 1, name: "Target", products: [{ _id: 1, name: "Soap" }]}].map((store) => (
             <div key={store.id} className="card">
