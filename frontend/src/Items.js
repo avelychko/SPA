@@ -8,7 +8,6 @@ export default function Items() {
       <>
             <h1>{"Target"} Items</h1>
         <div className='card'>
-          <h4 className='label-font'>Products:</h4>
           { [{_id: 1, name: "Soap"}].map((item) => (
             <Link to={`items/${item._id}`}><h1 className="label-font">{item.name}</h1></Link>
           ))}

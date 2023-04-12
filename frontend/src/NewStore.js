@@ -21,22 +21,13 @@ export default function NewStore() {
             <div>
             <label>Enter store name: 
                 <input type="text"
-                placeholder="name"
+                placeholder="type the name here..."
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}/>
             </label>
             </div>
-            
-            <div>
-            <label>Please enter an ID: 
-                <input type="text"
-                placeholder='Leave blank for random id'
-                value={currId}
-                onChange={(e) => setId(e.target.value)}/>
-            </label>
-            </div>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Add Store" />
         </form>
 
       </>

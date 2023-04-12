@@ -8,10 +8,10 @@ export default function SingleItem() {
             <link rel="stylesheet" href="style.css" />
             <h4>{"Soap"}</h4>
             <div>
-                <p>id: My id</p>
-                <p>quantity: My id</p>
-                <p>price: My id</p>
-                <p>store_id: My id</p>
+                <p>ID: {"id"}</p>
+                <p>Price: My id</p>
+                <p>Quantity: My id</p>
+                <p>Store ID: My id</p>
             </div>
 
         </>

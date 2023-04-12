@@ -11,8 +11,6 @@ export default function Stores() {
           {[{ id: 1, name: "Target", products: [{ _id: 1, name: "Soap" }]}].map((store) => (
             <div key={store.id} className="card">
                 <Link to={`${store.id}`}><h1 className="label-font">{store.name}</h1></Link>
-
-                <h4 className="label-font">ID: { store.id }</h4>
           </div>
               ))}
 
