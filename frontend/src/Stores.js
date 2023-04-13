@@ -1,28 +1,26 @@
-import {Link, useLoaderData} from 'react-router-dom';
+import {Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import './style.css'
 
 export default function Stores() {
-    const { stores } = [{ id: 1, name: "Target"}] //useLoaderData();
-  
+    const [stores, setStores] = useState([]);
+    
+    useEffect(()=> {
+      fetch('http://localhost:3001/stores').then((response) => response.json()).then((data) => setStores(data));
+    }, []);
+
     return (
       <>
-        <link rel="stylesheet" href="style.css"/>
         <h1>My stores</h1>
-          {[{ id: 1, name: "Target", products: [{ _id: 1, name: "Soap" }]}].map((store) => (
+          <Link to="new">Make a new store</Link>
+          {stores.map((store) => (
             <div key={store.id} className="card">
-                <Link to={`${store.id}`}><h1 className="label-font">{store.name}</h1></Link>
+                <Link to={`${store._id}`}><h1 className="label-font">{store.name}</h1></Link>
+                <p><b>ID:</b> {store._id}</p>
           </div>
               ))}
-
       </>
     );
-  }
-  
-  async function fetchStores() {
-    /*const response = await fetch("http://localhost:3000/stores");
-    return await response.json();*/
-    return null
-  }
-  
-  export { fetchStores };
+}
   

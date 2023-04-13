@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+
+/*
 import Wrapper from './Wrapper';
 import Stores, { fetchStores } from './Stores';
 import Items from './Items';
 import SingleItem, { fetchSingleItem } from './SingleItem';
-import reportWebVitals from './reportWebVitals';
 import NewStore, { getNothin } from './NewStore';
 import NewItem from './NewItem';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+*/
 
-
+/*
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/stores",
-        //loader: fetchStores,
+        loader: fetchStores,
         element: <Stores />,
       },
       {
@@ -49,11 +54,12 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
+    <App />
   </React.StrictMode>
 );
 
