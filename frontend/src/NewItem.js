@@ -4,16 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 export default function NewItem() {
     const [name, setName] = useState("");
-    const [price, setPrice] = useState(null);
-    const [quantity, setQuantity] = useState(null);
+    const [price, setPrice] = useState("");
+    const [quantity, setQuantity] = useState("");
     const { storeId } = useParams();
     const navigate = useNavigate();
 
     function postItem(e) {
         e.preventDefault();
-    
-        console.log(typeof(quantity));
-        
+            
         // create new item object from form values
         const newItem = {};
         newItem.name = name;

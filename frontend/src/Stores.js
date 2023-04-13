@@ -14,8 +14,8 @@ export default function Stores() {
       <>
         <h1>My stores</h1>
           <Link to="new">Make a new store</Link>
-          {stores.map((store) => (
-            <div key={store.id} className="card">
+          {stores.map((store, index) => (
+            <div key={index} className="card">
                 <Link to={`${store._id}`}><h1 className="label-font">{store.name}</h1></Link>
                 <p><b>ID:</b> {store._id}</p>
           </div>
