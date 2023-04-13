@@ -8,13 +8,9 @@ export default function Wrapper() {
           <h1>A website about stores</h1>
         </header>
         
-      <div>
+      </div>
       <Link to="/stores">View all stores</Link>
-      </div>
-      <Link to="/stores/new">Make a new store</Link>
-
       <Outlet />
-      </div>
     </>
   );
 }

@@ -1,17 +1,24 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function SingleItem() {
-    const { item } = [{ id: 1, name: "Soap" }] //useLoaderData();
+    const [ item, setItem] = useState({});
+    const { storeId, itemId } = useParams();
+
+    useEffect(()=> {
+      fetch(`http://localhost:3001/stores/${storeId}/items/${itemId}`).then((response) => response.json()).then((data) => setItem(data));
+    }, [storeId, itemId]);
 
     return (
         <>
-            <link rel="stylesheet" href="style.css" />
-            <h4>{"Soap"}</h4>
+            <h1>Item</h1>
+            <h2>Name: {item.name}</h2>
             <div>
-                <p>ID: {"id"}</p>
-                <p>Price: My id</p>
-                <p>Quantity: My id</p>
-                <p>Store ID: My id</p>
+                <p>ID: {item._id}</p>
+                <p>Price: {item.price}</p>
+                <p>Quantity: {item.quantity} </p>
+                <p>Store ID: {item.store_id}</p>
             </div>
 
         </>

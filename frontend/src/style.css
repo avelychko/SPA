@@ -6,10 +6,11 @@
 
 .card {
     width: 400px;
-    aspect-ratio: 4;
     background-color: #990011FF;
     border-radius: 20px;
     margin: 5px;
+    padding: 5px;
+    padding-left: 8px;
 }
 
 body {

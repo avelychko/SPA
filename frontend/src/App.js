@@ -6,12 +6,13 @@ import NewStore from './NewStore';
 import Items from './Items';
 import NewItem from './NewItem';
 import SingleItem from './SingleItem';
+import Wrapper from './Wrapper';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
+        <Route path="/" element={<Wrapper />}>
           <Route path="stores" element={<Stores />} />
           <Route path="stores/:storeId" element={<Items/>} />
           <Route path="stores/new" element={<NewStore/>} />

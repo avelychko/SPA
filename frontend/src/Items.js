@@ -24,7 +24,7 @@ export default function Items() {
         <div>
           {items.map((item, index) => (
             <div key={index} className='card'>
-              <Link to={`stores/${storeId}/items/${item._id}`}><h1 className="label-font">{item.name}</h1></Link>
+              <Link to={`/stores/${storeId}/items/${item._id}`}><h1 className="label-font">{item.name}</h1></Link>
               <p><b>ID:</b> {item._id}</p>
             </div>
           ))}
